@@ -1,0 +1,150 @@
+Example of combining object files into an executable, based on the
+object files from the lab.
+
+----
+
+In the linkisalab we produced two object files,
+which might have looked like this (some variation is possible):
+
+sum.obj
+```
+0x000: 30f80800000000000000 | location of sum label
+0x00a: 6066                
+0x00c: 6066                
+0x00e: 6066                
+0x010: 6076                
+0x012: 6300                
+0x014: 6186                 | location of sum_loop label
+0x016: 2069                
+0x018: 6179                
+0x01a: 723800000000000000  
+0x023: 50960000000000000000
+0x02d: 6090                
+0x02f: 701400000000000000  
+0x038: 90                  | location of end_sum_loop label
+***
+0x1b,end_sum_loop
+0x30,sum_loop
+***
+0x0,sum
+0x14,sum_loop
+0x38,end_sum_loop
+```
+
+
+sum-main.obj:
+```
+0x000: 30f71e00000000000000
+0x00a: 30f60400000000000000
+0x014: 80ffffffffffffffff  
+0x01d: 00                  
+0x01e: 0000341200003412    
+0x026: 3412000034120000    
+0x02e: 0000214300002143    
+0x036: 2143000021430000    
+***
+0x2,array
+0x15,sum
+***
+0x0,main
+0x1e,array
+```
+
+
+To combine these into an executable, one way we can start is
+by combining the machine code+data parts
+to choose how the files will be laid out in memory:
+
+```
+0x000: 30f71e00000000000000 
+0x00a: 30f60400000000000000
+0x014: 80ffffffffffffffff  
+0x01d: 00                  
+0x01e: 0000341200003412    
+0x026: 3412000034120000    
+0x02e: 0000214300002143    
+0x036: 2143000021430000    
+0x03e: 30f80800000000000000
+0x048: 6066                
+0x04a: 6066                
+0x04c: 6066                
+0x04e: 6076                
+0x050: 6300                
+0x052: 6186               
+0x054: 2069                
+0x056: 6179                
+0x058: 723800000000000000  
+0x061: 50960000000000000000
+0x06b: 6090                
+0x06d: 701400000000000000  
+0x076: 90                
+```
+
+But if we tried to run this, we'd have problems because there are still placeholder
+addresses not filled in. To do this, we need to look at
+the relocations. Let's start with the first relocation from sum.obj:
+
+*  from sum.obj, offset 0x1b needs end_sum_loop's address:
+    *  we see that end_sum_loop was at offset 0x38 of sum.obj originally, which, based on
+        how we laid out the executable, will end up at memory location 0x76
+    *  we see that offset 0x1b of sum.obj ended up at memory location 0x59
+
+So we need to replace memory location 0x59 (which happens to correspond
+to the address field of a conditional jump instruction) with the address 0x76, yielding:
+
+```
+0x000: 30f71e00000000000000 
+0x00a: 30f60400000000000000
+0x014: 80ffffffffffffffff  
+0x01d: 00                  
+0x01e: 0000341200003412    
+0x026: 3412000034120000    
+0x02e: 0000214300002143    
+0x036: 2143000021430000    
+0x03e: 30f80800000000000000 
+0x048: 6066                
+0x04a: 6066                
+0x04c: 6066                
+0x04e: 6076                
+0x050: 6300                
+0x052: 6186                
+0x054: 2069                
+0x056: 6179                
+0x058: 727600000000000000  
+0x061: 50960000000000000000
+0x06b: 6090                
+0x06d: 701400000000000000  
+0x076: 90                 
+```
+
+We then repeat this for all the other relocations:
+
+*  from sum.obj, offset 0x30 needs the address of sum_loop
+*  from sum-main.obj, offset 0x2 needs the address of array
+*  from sum-main.obj, offset 0x15 needs the address of sum
+
+yielding:
+```
+0x000: 30f71e00000000000000
+0x00a: 30f60400000000000000
+0x014: 803e00000000000000  
+0x01d: 00                  
+0x01e: 0000341200003412    
+0x026: 3412000034120000    
+0x02e: 0000214300002143    
+0x036: 2143000021430000    
+0x03e: 30f80800000000000000
+0x048: 6066                
+0x04a: 6066                
+0x04c: 6066                
+0x04e: 6076                
+0x050: 6300                
+0x052: 6186                
+0x054: 2069                
+0x056: 6179                
+0x058: 727600000000000000  
+0x061: 50960000000000000000
+0x06b: 6090                
+0x06d: 705200000000000000  
+0x076: 90                 
+```

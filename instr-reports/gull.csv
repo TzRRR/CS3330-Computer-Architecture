@@ -1,0 +1,33 @@
+Running command ./LazyGull-f0 bench 13 rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1,,,,
+category,retired,% retired,in program,% in program
+unknown/ignored instructions,56,1.26E-06,51,0.007998858
+total instructions,4444321834,99.99999874,637591,100
+non-mov instructions with two operands,2242189511,50.45065516,271367,42.56129713
+non-mov instructions with two register operands,1017592633,22.89646561,113176,17.75056423
+register-to-register unconditional movs,376512109,8.471756059,43552,6.830711224
+register-to-register conditional movs,71446903,1.607599647,2062,0.323404816
+instructions that write memory,704257450,15.84622958,108872,17.07552334
+non-mov/cmov/push instructions that write memory,269377729,6.061166038,33446,5.245682577
+instructions that read memory,1160466519,26.11121669,147767,23.17582902
+non-mov/cmov/pop instructions that read memory,578862636,13.02476846,80167,12.57342089
+instructions that both read AND write memory,269378093,6.061174228,33969,5.327710084
+conditional jumps,476299903,10.71704334,66293,10.39741778
+indirect (computed) jumps (including virtual calls),673919,0.015163596,1931,0.302858729
+unconditional jumps (including calls),35121403,0.790253359,24225,3.799457646
+"instructions with disp(rXX,rYY) or disp(rXX,rYY,scale) addressing",427841147,9.626691261,30928,4.850758558
+"instructions with disp(rXX,rYY,scale) addressing where scale != 1",326186380,7.339395932,8844,1.387096116
+"instructions with disp(rXX,rYY) (or disp(rXX,rYY,scale) with scale = 1) addressing",101654767,2.287295329,22084,3.463662442
+"instructions with disp(,rYY,scale) addressing (where scale is not 1)",2414641,0.054330921,769,0.120610234
+"instructions with disp(rXX,rYY,scale) or disp(,rYY,scale) addressing (where scale is not 1)",328601021,7.393726853,9613,1.507706351
+instructions with non-zero immediate,1859352589,41.83658689,226122,35.46505518
+instructions with non-zero immediate that fits in signed byte,1081431422,24.33287797,144507,22.66452946
+instructions with non-zero immediate that fits in unsigned byte,1233801115,27.7612906,158794,24.90530763
+instructions with non-zero immediate that fits in 10 bit (or smaller) signed number,1254727419,28.23214542,162848,25.54113844
+instructions with non-zero immediate that fits in 10 bit (or smaller) unsigned number,1258004424,28.30588007,165503,25.95754959
+instructions with non-zero immediate that fits in 13 bit (or smaller)signed number,1310079026,29.47759092,174315,27.33962681
+instructions with non-zero immediate that fits in 13 bit (or smaller) unsigned number,1329455299,29.91356909,175514,27.5276784
+instructions with non-zero immediate that fits in 16 bit (or smaller) signed number,1364431472,30.70055468,177898,27.90158581
+instructions with non-zero immediate that fits in 18 bit (or smaller) signed number,1414601777,31.82941767,180909,28.37383213
+instructions with non-zero immediate that fits in 20 bit (or smaller) signed number,1458667204,32.82091712,186635,29.27190001
+instructions with non-zero immediate that fits in 32 bit (or smaller) signed number,1813363216,40.80179746,217186,34.06352975
+instructions with non-zero immediate that fits in 48 bit (or smaller) signed number,1843984832,41.49080282,221586,34.75362733

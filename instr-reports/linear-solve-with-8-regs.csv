@@ -1,0 +1,33 @@
+Running command ./lapack-sgesv-f8f
+category,retired,% retired,in program,% in program
+unknown/ignored instructions,92,9.367585457470755e-06,63,0.005401618942363011
+total instructions,982109977,99.99999063241454,1166317,100.0
+non-mov instructions with two operands,829516041,84.46263480880776,508973,43.63933647541792
+non-mov instructions with two register operands,361497363,36.80823304948725,195869,16.793804771773026
+register-to-register unconditional movs,12312842,1.2537130397753817,75592,6.481256810969916
+register-to-register conditional movs,547872,0.05578519325821106,4935,0.4231268171517692
+instructions that write memory,107848721,10.981327287461097,219923,18.85619432795715
+non-mov/cmov/push instructions that write memory,92029856,9.370625442594866,78186,6.703666327422133
+instructions that read memory,338539340,34.47061084962769,306281,26.260527798188658
+non-mov/cmov/pop instructions that read memory,316706342,32.24754047399956,171000,14.66153712927103
+instructions that both read AND write memory,92029920,9.370631959176054,78955,6.769600374512247
+conditional jumps,95275783,9.701130861738472,108382,9.292670860495045
+indirect (computed) jumps (including virtual calls),682,6.944231828255495e-05,2912,0.24967483111366806
+unconditional jumps (including calls),232533,0.02367687770850051,37940,3.2529749630675022
+"instructions with disp(rXX,rYY) or disp(rXX,rYY,scale) addressing",177497456,18.073071603952773,70151,6.014745562312819
+"instructions with disp(rXX,rYY,scale) addressing where scale != 1",6403651,0.6520298693730224,24998,2.143328100336358
+"instructions with disp(rXX,rYY) (or disp(rXX,rYY,scale) with scale = 1) addressing",171093805,17.421041734579752,45153,3.8714174619764607
+"instructions with disp(,rYY,scale) addressing (where scale is not 1)",17214,0.001752756696357626,2349,0.20140322056524942
+"instructions with disp(rXX,rYY,scale) or disp(,rYY,scale) addressing (where scale is not 1)",6420865,0.65378262606938,27347,2.3447313209016074
+instructions with non-zero immediate,228680988,23.284659756400483,442965,37.97981166355287
+instructions with non-zero immediate that fits in signed byte,224714368,22.880772236538387,277143,23.762236167354157
+instructions with non-zero immediate that fits in unsigned byte,226647602,23.0776171789763,309106,26.502743250762872
+instructions with non-zero immediate that fits in 10 bit (or smaller) signed number,226692129,23.082150988516137,333336,28.580223043992326
+instructions with non-zero immediate that fits in 10 bit (or smaller) unsigned number,226699190,23.082869950699997,359598,30.831926483108795
+instructions with non-zero immediate that fits in 13 bit (or smaller)signed number,226711272,23.084100159042357,379585,32.545611527569264
+instructions with non-zero immediate that fits in 13 bit (or smaller) unsigned number,226714614,23.08444044676626,382298,32.77822410202372
+instructions with non-zero immediate that fits in 16 bit (or smaller) signed number,226744117,23.087444488872254,387290,33.20623809821858
+instructions with non-zero immediate that fits in 18 bit (or smaller) signed number,226745620,23.08759752670859,391500,33.56720342754157
+instructions with non-zero immediate that fits in 20 bit (or smaller) signed number,226745698,23.08760546879191,399977,34.29402126523063
+instructions with non-zero immediate that fits in 32 bit (or smaller) signed number,227929082,23.208099498672382,432352,37.06985322172274
+instructions with non-zero immediate that fits in 48 bit (or smaller) signed number,228669857,23.28352638038171,436986,37.46717230392766

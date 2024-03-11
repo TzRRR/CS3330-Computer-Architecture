@@ -1,0 +1,33 @@
+Running command ./queens-f8f -c 13,,,,
+category,retired,% retired,in program,% in program
+unknown/ignored instructions,24,3.23E-06,22,0.005508331
+total instructions,743242977,99.99999677,399395,100
+non-mov instructions with two operands,394538158,53.0833331,156480,39.17925863
+non-mov instructions with two register operands,78403009,10.54877192,59863,14.98841999
+register-to-register unconditional movs,13902466,1.870514217,31636,7.920980483
+register-to-register conditional movs,224,3.01E-05,1331,0.333254047
+instructions that write memory,169531894,22.80975317,70342,17.61213836
+non-mov/cmov/push instructions that write memory,90256004,12.14353904,16456,4.120231851
+instructions that read memory,176975816,23.81129937,86732,21.71584522
+non-mov/cmov/pop instructions that read memory,90268592,12.1452327,33400,8.362648506
+instructions that both read AND write memory,90256043,12.14354429,16975,4.250178395
+conditional jumps,154849517,20.83430544,47621,11.92328397
+indirect (computed) jumps (including virtual calls),298,4.01E-05,1649,0.412874473
+unconditional jumps (including calls),4676777,0.629239292,16230,4.063646265
+"instructions with disp(rXX,rYY) or disp(rXX,rYY,scale) addressing",132112299,17.77511511,21036,5.266966287
+"instructions with disp(rXX,rYY,scale) addressing where scale != 1",118158999,15.89776141,4605,1.152993903
+"instructions with disp(rXX,rYY) (or disp(rXX,rYY,scale) with scale = 1) addressing",13953300,1.877353703,16431,4.113972383
+"instructions with disp(,rYY,scale) addressing (where scale is not 1)",59815403,8.047893208,600,0.150227219
+"instructions with disp(rXX,rYY,scale) or disp(,rYY,scale) addressing (where scale is not 1)",177974402,23.94565462,5205,1.303221122
+instructions with non-zero immediate,290096771,39.03121464,150739,37.74183452
+instructions with non-zero immediate that fits in signed byte,257360619,34.62671275,102721,25.71915021
+instructions with non-zero immediate that fits in unsigned byte,257364970,34.62729816,113546,28.42949962
+instructions with non-zero immediate that fits in 10 bit (or smaller) signed number,257365169,34.62732493,116919,29.27402697
+instructions with non-zero immediate that fits in 10 bit (or smaller) unsigned number,257368502,34.62777337,118569,29.68715182
+instructions with non-zero immediate that fits in 13 bit (or smaller)signed number,257369531,34.62791182,126097,31.57200265
+instructions with non-zero immediate that fits in 13 bit (or smaller) unsigned number,257369681,34.627932,126947,31.78482455
+instructions with non-zero immediate that fits in 16 bit (or smaller) signed number,257370002,34.62797519,127965,32.03971006
+instructions with non-zero immediate that fits in 18 bit (or smaller) signed number,257370552,34.62804919,130058,32.56375268
+instructions with non-zero immediate that fits in 20 bit (or smaller) signed number,257370576,34.62805242,131486,32.92129346
+instructions with non-zero immediate that fits in 32 bit (or smaller) signed number,290096073,39.03112072,144289,36.12689192
+instructions with non-zero immediate that fits in 48 bit (or smaller) signed number,290096340,39.03115665,147383,36.90156361

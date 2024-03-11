@@ -1,0 +1,33 @@
+Running command cc -c -O3 -D_XOPEN_SOURCE=700 -ggdb queens.c -o /dev/null,,,,
+category,retired,% retired,in program,% in program
+unknown/ignored instructions,15279,0.006293503,165,0.003320875
+total instructions,242758909,99.9937065,4968570,100
+non-mov instructions with two operands,104209475,42.92444591,1490609,30.00076481
+non-mov instructions with two register operands,33951674,13.984878,586687,11.80796487
+register-to-register unconditional movs,19519946,8.040371244,527012,10.60691507
+register-to-register conditional movs,503185,0.207264621,9900,0.199252501
+instructions that write memory,43102255,17.75405176,1043371,20.99942237
+non-mov/cmov/push instructions that write memory,17155692,7.066522245,226192,4.552456743
+instructions that read memory,69915345,28.79850843,1195311,24.0574451
+non-mov/cmov/pop instructions that read memory,29316724,12.07571704,384936,7.747420284
+instructions that both read AND write memory,17372160,7.155686584,233115,4.691792608
+conditional jumps,40548115,16.70198769,616794,12.41391386
+indirect (computed) jumps (including virtual calls),1017205,0.418992237,18996,0.382323284
+unconditional jumps (including calls),2288123,0.942490229,240425,4.838917435
+"instructions with disp(rXX,rYY) or disp(rXX,rYY,scale) addressing",10566416,4.352363852,136569,2.748658065
+"instructions with disp(rXX,rYY,scale) addressing where scale != 1",5457678,2.248047062,51546,1.037441356
+"instructions with disp(rXX,rYY) (or disp(rXX,rYY,scale) with scale = 1) addressing",5108738,2.10431679,85023,1.711216708
+"instructions with disp(,rYY,scale) addressing (where scale is not 1)",1746053,0.719208666,17617,0.35456882
+"instructions with disp(rXX,rYY,scale) or disp(,rYY,scale) addressing (where scale is not 1)",7203731,2.967255728,69163,1.392010176
+instructions with non-zero immediate,85087397,35.04795864,1826545,36.76198584
+instructions with non-zero immediate that fits in signed byte,67448165,27.78226366,1322303,26.61335153
+instructions with non-zero immediate that fits in unsigned byte,69683048,28.70282404,1420071,28.58108067
+instructions with non-zero immediate that fits in 10 bit (or smaller) signed number,70568122,29.06739081,1456589,29.31606076
+instructions with non-zero immediate that fits in 10 bit (or smaller) unsigned number,71944727,29.63442184,1481214,29.8116762
+instructions with non-zero immediate that fits in 13 bit (or smaller)signed number,73482597,30.26787881,1518553,30.56318015
+instructions with non-zero immediate that fits in 13 bit (or smaller) unsigned number,73575318,30.30607109,1528074,30.7548047
+instructions with non-zero immediate that fits in 16 bit (or smaller) signed number,74264859,30.59009675,1536716,30.92873805
+instructions with non-zero immediate that fits in 18 bit (or smaller) signed number,74642641,30.7457072,1543339,31.06203596
+instructions with non-zero immediate that fits in 20 bit (or smaller) signed number,75021611,30.90180699,1557972,31.35654726
+instructions with non-zero immediate that fits in 32 bit (or smaller) signed number,83532323,34.40741526,1791300,36.05262681
+instructions with non-zero immediate that fits in 48 bit (or smaller) signed number,84424724,34.77500005,1812536,36.48003349
